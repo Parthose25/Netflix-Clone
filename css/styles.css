@@ -1,0 +1,412 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #000;
+  color: #999;
+}
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+.showcase {
+  width: 100%;
+  height: 94vh;
+  position: relative;
+  background: url("../img/background.jpg") no-repeat center center/cover;
+}
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+.showcase-top {
+  position: relative;
+  z-index: 2;
+  height: 90px;
+}
+.showcase-image {
+  width: 170px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  margin-left: 0;
+}
+.showcase-top a {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+.option {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  right: 12%;
+  top: 34%;
+  width: 90px;
+  padding: 0.3rem;
+  background-color: #000;
+  border: 1px solid #fff;
+  margin-right: 5px;
+}
+.btn {
+  display: inline-block;
+  background-color: #e50914;
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-rounded {
+  border-radius: 5px;
+}
+.btn-xl {
+  font-size: 1.8rem;
+  padding: 15px 10px;
+  width: 250px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.showcase-content div {
+  display: flex;
+}
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  width: 45%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 8rem;
+}
+.showcase-content input {
+  width: 550px;
+  height: 65px;
+}
+.showcase-content h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+}
+
+.showcase-content p {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin: 0 0 2rem;
+}
+
+.question h1 {
+  line-height: 1.2rem;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 80px;
+}
+.questions-asked {
+  width: 50%;
+  margin: 9px auto;
+  background-color: #303030;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.question button {
+  background-color: #303030;
+  border: none;
+  padding-left: 20px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+  width: 110%;
+  text-align: left;
+}
+.question-content {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #303030;
+  color: #fff;
+  padding: 15px;
+  border-top: 1px solid black;
+  margin-top: -10px;
+  display: none;
+}
+.display-block {
+  display: block;
+}
+.question-icon {
+  margin-top: 10px;
+}
+hr {
+  margin-top: 30px;
+  border: 4px solid #222;
+  margin-bottom: 80px;
+}
+.footer {
+  max-width: 70%;
+  margin: 1rem auto;
+  overflow: auto;
+  position: relative;
+  margin-top: 20px;
+}
+.footer,
+.footer a {
+  color: #999;
+  font-size: 0.9rem;
+}
+.footer p {
+  margin-bottom: 1.5rem;
+}
+.footer .footer-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 50px;
+}
+.footer li {
+  line-height: 1.9;
+}
+.footer select {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  width: 100px;
+  padding: 0.5rem;
+  background-color: #000;
+  border: 1px solid #fff;
+  margin-top: -50px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.login-form {
+  position: relative;
+  width: 33%;
+  margin: 80px auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 2;
+  padding: 10px;
+}
+.login-form h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+  padding: 25px;
+}
+.login-form input {
+  width: 300px;
+  height: 40px;
+  margin: 5px;
+  margin-left: 30px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.login-form a {
+  width: 300px;
+  margin: 10px;
+  margin-left: 35px;
+}
+.sign-in span {
+  color: #fff;
+}
+@media (max-width: 1180px) {
+  .option {
+    margin-right: 40px;
+  }
+  .showcase {
+    height: 80vh;
+  }
+  .showcase-content {
+    margin-top: 3rem;
+  }
+  .showcase-content h1 {
+    font-size: 3.5rem;
+  }
+  .create {
+    margin-top: 40px !important;
+  }
+  .login-form {
+    margin: 10px auto;
+    width: 40%;
+  }
+}
+@media (max-width: 1020px) {
+  .showcase {
+    height: 70vh;
+  }
+  .showcase-content {
+    margin-top: 2rem;
+  }
+  .showcase-content h1 {
+    font-size: 2rem;
+  }
+  .showcase-content input {
+    width: 250px;
+    height: 40px;
+  }
+  .btn-xl {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .question h1 {
+    font-size: 3rem;
+  }
+  .questions-asked button {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 960px) {
+  .showcase {
+    height: 65vh;
+  }
+  .showcase-top img {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    transform: translate(0);
+  }
+  .showcase-content h1 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .showcase-content p {
+    font-size: 1rem;
+  }
+  .footer .footer-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .option {
+    margin-right: 80px;
+  }
+  .login-form {
+    width: 50%;
+  }
+  footer {
+    margin-top: 200px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .showcase::after {
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 80px 80px 150px #000000, inset -80px -80px 150px #000000;
+  }
+  .showcase-top img {
+    left: 25%;
+  }
+
+  .showcase-content h1 {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .showcase-content p {
+    font-size: 1rem;
+  }
+  .btn-xl {
+    font-size: 1rem;
+    width: 200px;
+  }
+  .question h1 {
+    font-size: 2rem;
+  }
+  .login-form h1 {
+    font-size: 2.4rem;
+  }
+  .login-form {
+    width: 65%;
+    margin-top: 60px;
+  }
+}
+
+@media (max-height: 600px) {
+  .showcase-content {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 600px) {
+  .option {
+    margin-right: 100px;
+  }
+  .question h1 {
+    font-size: 1rem;
+  }
+  .login-form {
+    width: 75%;
+  }
+}
+
+@media (max-width: 470px) {
+  .btn-xl {
+    font-size: 0.8rem;
+    width: 120px;
+  }
+  .showcase-content input {
+    width: 200px;
+  }
+  .showcase-image {
+    width: 25%;
+  }
+  .showcase-content p {
+    font-size: 0.7rem;
+  }
+  .login-form {
+    width: 85%;
+  }
+  .login-form input {
+    width: 60%;
+  }
+  .login-form a {
+    width: 60%;
+  }
+}
